@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
-
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
 
@@ -10,42 +11,59 @@ public class Main {
         boolean validation = true;
         float promedio = 0;
         int sumaCalificaciones = 0;
+        int calificacionMasAlta = 0;
+        int calificacionMasBaja = 0;
+        int[] calfNotorias = new int[2];
 
         Scanner sc = new Scanner(System.in);
+
         while (validation == true){
 
-
             System.out.println("¿Cuantas materias tienes?");
-            int materias = sc.nextInt();
+            int cantMaterias = sc.nextInt();    
             
             sc.nextLine();
 
-            for (int i = 1; i <= materias; i += 1) {
-                System.out.println("Que materia es?");
-                String materia = sc.nextLine();
-                System.out.println("Cuanto sacaste?");
-                int calificacion = sc.nextInt();
-                sc.nextLine();
-                sumaCalificaciones = sumaCalificaciones + calificacion ;
-                calificaciones.put(materia, calificacion);
-            }
+            promedio = userInput(cantMaterias, sc, promedio, calificaciones);
+            System.out.println(promedio);
 
-            for (int i : calificaciones.values()){
-                promedio = sumaCalificaciones / materias;
-                System.out.println("Tu promedio es de: " + promedio);
+            showResults(calificaciones, promedio);
 
-            }
-
-            System.out.println("Do you want to try it again?");
             String userAnswer = sc.nextLine();
-
             if (userAnswer.equals("no")){
                 validation = false;
             }
         }
-            
-
         sc.close();
     }
-        
+
+    public static int[] notorias(HashMap<String, Integer> calificaciones) {  
+        int[] calfNotorias = new int[2];
+        calfNotorias[0] = Collections.min(calificaciones.values());
+        calfNotorias[1] = Collections.max(calificaciones.values());
+
+        return calfNotorias;
+    }
+    public static void showResults(HashMap<String, Integer> calificaciones, float promedio){
+
+        int[] cantidades = Main.notorias(calificaciones);
+        System.out.println("Tus promedios en esta unidad son de: " + promedio);
+        System.out.println("Tus calificaciones más altas y más bajas son: " + Arrays.toString(cantidades));
+        System.out.println("Do you want to try it again?");
+   
+    };
+    public static float userInput(float cantMaterias,  Scanner sc, float promedio, HashMap<String, Integer> calificaciones ){
+        float sumaCalificaciones = 0;
+        for (int i = 1; i <= cantMaterias; i += 1) {
+            System.out.println("Cual es tu " + i + " materia");
+            String materia = sc.nextLine();
+            System.out.println("Cuanto sacaste?");
+            int calificacion = sc.nextInt();
+            sc.nextLine();
+            sumaCalificaciones += calificacion; 
+            calificaciones.put(materia, calificacion);
+        }
+        promedio = sumaCalificaciones/cantMaterias;
+        return promedio; 
+    }
 }
