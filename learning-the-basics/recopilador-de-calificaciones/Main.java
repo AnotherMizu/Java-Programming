@@ -69,10 +69,9 @@ public class Main {
             "Tus calificaciones más altas y más bajas son: "
             + Arrays.toString(cantidades)
         );
-
+        
         System.out.println("Do you want to try it again?");
     }
-
 
     public static float userInput(int cantMaterias, Scanner sc, HashMap<String, Integer> calificacionesUnidad){
 
