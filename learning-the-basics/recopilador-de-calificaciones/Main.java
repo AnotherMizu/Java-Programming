@@ -46,6 +46,7 @@ public class Main {
     }
     public static void showResults(HashMap<String, Integer> calificaciones, float promedio){
 
+<<<<<<< HEAD
         int[] cantidades = Main.notorias(calificaciones);
         System.out.println("Tus promedios en esta unidad son de: " + promedio);
         System.out.println("Tus calificaciones más altas y más bajas son: " + Arrays.toString(cantidades));
@@ -53,6 +54,34 @@ public class Main {
    
     };
     public static float userInput(float cantMaterias,  Scanner sc, float promedio, HashMap<String, Integer> calificaciones ){
+=======
+
+    public static void showResults(HashMap<String, Integer> calificacionesUnidad, float promedio){
+
+        int[] cantidades = Main.notorias(calificacionesUnidad);
+
+
+        //muestra los promedios de esta unidad
+        System.out.println(
+            "Tus promedios en esta unidad son de: " + promedio
+        );
+
+
+        //muestra las calificaciones más baja y más alta y utilizamos .toString para convertir a los variables en texto sin caracteristicas de array
+        System.out.println(
+            "Tus calificaciones más baja y más alta son: "
+            + Arrays.toString(cantidades)
+        );
+        
+
+        //Hacemos la pregunta sobre si quiere reiniciar el programa para introducir más información
+        
+        System.out.println("Do you want to try it again?");
+    }
+
+    public static float userInput(int cantMaterias, Scanner sc, HashMap<String, Integer> calificacionesUnidad){
+        //Ponemos en 0 la variable por si tiene datos se borren 
+>>>>>>> af5bdb4fd6ab81fad064426f03966eebf62d273b
         float sumaCalificaciones = 0;
         for (int i = 1; i <= cantMaterias; i += 1) {
             System.out.println("Cual es tu " + i + " materia");

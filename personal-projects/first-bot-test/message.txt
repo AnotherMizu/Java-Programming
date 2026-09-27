@@ -1,0 +1,10 @@
+¡Hola, {userName}! Qué gusto verte por el chat.
+¡Buenas buenas, {userName}! Ponte cómodo y disfruta del stream.
+¿Qué onda, {userName}? ¿Cómo va tu día?
+¡Atención a todos, ha llegado {userName} al chat!
+¡Bienvenido/a, {userName}! Un placer tenerte por aquí.
+¡Ey, {userName}! Qué alegría que te te hayas pasado a saludar.
+¡Llegó la leyenda: {userName}! ¿Qué se cuenta hoy?
+¡Hola hola, {userName}! Pásala genial en el directo.
+¡Un gran saludo para {userName}! Gracias por caerle al stream.
+¡{userName} ha entrado en la sala! ¿Listo para el stream de hoy?
