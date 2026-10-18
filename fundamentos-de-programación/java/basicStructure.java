@@ -13,8 +13,16 @@ public class BasicStructure {
 
     //Area para crear módulos (métodos o funciones) de usuario.(OPCIONAL)
 
-    //Método principal (main).C
-        System.out.println(holaMundo);
+    public static void main(String[] args){    //Método principal (main).C
+        System.out.println("holaMundo");
+        ValidadorRango validador = new ValidadorRango(0, 6);
+
+        if (validador.esValido(-1)) {
+            showMessageDialog(null, "Esta dentro de rango");
+        }
+        else { 
+            showMessageDialog(null, "Esta fuera de rango");
+        }
 
 
     }//main
