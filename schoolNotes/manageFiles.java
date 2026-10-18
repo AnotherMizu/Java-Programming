@@ -13,7 +13,7 @@ public class manageFiles {
         File carpeta = new File(sCarpAct);
         String identificador = "";
         String direccion = "";
-        Path path = Path.get("C:\Users\ederf\OneDrive\Desktop\java-programming\schoolNotes>");
+        Path path = Path.get("C:\\Users\\ederf\\OneDrive\\Desktop\\java-programming\\schoolNotes>");
         
 
         File[] elementos = carpeta.listFiles();

@@ -1,0 +1,16 @@
+1-Empieza con letras      a = 0
+2-Los demas caracteres pueden ser letras, digitos o caracteres a2_ = 0
+3-las letras no deben de ser tildadas   ñíñá = yes
+4-No se admiten espacios en blancos     mi nombres = eder 
+5-No deben de coincidir con palabras reservadas con el lenguaje     not Class = 0
+6-Deben de ser nombres referentes al dato que contienen     miNombre = "Eder" 
+7- se uasara camelCase          seriaAlgoAsi
+    -Convencion de escritura en programación
+    consiste en:
+        Juntar varias palabras en una sola.
+        sin espacios ni puntos.
+        diferenciando cada palabra al poner su primera letra en mayuscula
+
+    UpperCamelCase <- Clases  
+    lowerCamelCase <- variablesEnGeneral
+        
