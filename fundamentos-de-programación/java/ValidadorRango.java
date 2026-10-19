@@ -1,5 +1,4 @@
 
-
 public class ValidadorRango {
     // Planteo los atributos del objeto
     private int numMin;
